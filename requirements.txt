@@ -1,0 +1,10 @@
+requests
+pandas
+spacy
+textstat
+transformers
+torch
+wikipedia-api
+sklearn
+seaborn
+matplotlib
