@@ -99,7 +99,7 @@ This prototype is written in Python notebooks to allow rapid iteration and clear
 3. **Install Python dependencies**
 
    ```bash
-   pip install -r requirements.txt
+   pip install -r OLDrequirements.txt
    python -m spacy download en_core_web_sm
    ```
 

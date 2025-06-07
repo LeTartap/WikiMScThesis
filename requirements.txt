@@ -3,8 +3,9 @@ pandas
 spacy
 textstat
 transformers
-torch
 wikipedia-api
-sklearn
+scikit-learn
 seaborn
 matplotlib
+# torch with CUDA 11.8
+torch==2.2.2+cu118 -f https://download.pytorch.org/whl/torch_stable.html
