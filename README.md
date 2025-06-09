@@ -17,9 +17,6 @@ This repository contains a prototype pipeline for extracting, processing, and an
    3. [3. Extract Features](#3-extract-features)
    4. [4. Rule-/Threshold-Based Detection](#4-rule--threshold-based-detection)
    5. [5. Inspect & Iterate](#5-inspect--iterate)
-6. [Configuration](#configuration)
-7. [Extending to Full-Scale Data](#extending-to-full-scale-data)
-8. [Future Work](#future-work)
 9. [License](#license)
 
 ---
@@ -53,11 +50,7 @@ This prototype is written in Python notebooks to allow rapid iteration and clear
 ├── pipeline_prototype.ipynb         # Main Jupyter notebook for toy-data pipeline
 ├── requirements.txt                 # Python dependencies
 ├── utils/
-│   ├── api_helpers.py               # Functions for fetching revisions via MediaWiki API
-│   ├── text_cleaning.py             # clean_text(), parse_with_spacy() functions
-│   ├── feature_extraction.py        # compute_delta(), compute_perplexity_and_burstiness(), etc.
-│   ├── detection.py                 # rule_based_flag() and threshold definitions
-│   └── config.py                    # Constants for sample pages, date ranges, thresholds
+---> wiill do some cleaning
 ├── data/
 │   ├── tiny_revisions.pkl           # (Optional) Cached revision metadata & content
 │   ├── tiny_features.csv            # (Optional) Extracted features for toy data
@@ -180,57 +173,19 @@ Open `pipeline_prototype.ipynb` in Jupyter or JupyterLab and follow the cells in
 * **Citation Delta:** `compute_citation_delta(wikitext)` via regex.
 * Aggregate all feature columns into a single DataFrame `features_df` and save as `data/tiny_features.csv`.
 
-### 4. Rule-/Threshold-Based Detection
 
-* Standardize numeric features with `StandardScaler`.
-* Define simple thresholds in `config.py` (e.g. `delta > 0.05`, `perplexity < -1`, `citation_delta < -0.1`).
-* Use `rule_based_flag(row, thresholds)` from `detection.py` to assign `ai_flag`.
-* Inspect `features_df[features_df["ai_flag"] == True]` to see flagged revisions.
-
-### 5. Inspect & Iterate
-
-* Plot distributions (e.g., KDE of `delta` by `ai_flag`) to visualize separation.
-* Adjust thresholds or add/remove feature rules to improve toy-data performance.
-* Document your observations in the notebook’s commentary cells.
 
 ---
 
 ## Configuration
 
-All tunable constants are defined in `utils/config.py`:
+
 
 * `sample_pages`: List of page titles to fetch.
 * `START_TIMESTAMP`, `END_TIMESTAMP`: Time window for revision fetching.
 * `TRIGGER_SET`: Set of LLM-favored words for δ.
 * `THRESHOLDS`: Dictionary of feature thresholds for rule-based voting.
-* `VOTE_CUTOFF`: Minimum number of triggered features to mark `ai_flag=True`.
 
-Modify `config.py` as needed before running the notebook.
-
----
-
-## Extending to Full-Scale Data
-
-Once the prototype is validated on tiny data, you can scale up by:
-
-1. **Increasing `sample_pages`** to include all pages in chosen strata (via `categorymembers`).
-2. **Adjusting date ranges** to cover 2020–2024 (261 weekly snapshots per page).
-3. **Switch GPT-2 small → GPT-2 XL** (or use an n-gram model) for better perplexity fidelity.
-4. **Parallelize spaCy and transformers passes** (e.g., using multiprocessing or batching on GPU).
-5. **Store features in a distributed format** (e.g., Parquet on S3 or a local XCom) for memory‐efficient processing.
-6. **Refine detection rules** or replace with a lightweight logistic regression (still under Method B).
-
-Refer to `docs/project_plan.md` for a detailed task breakdown, and `docs/feature_spec_sheet.md` for a complete feature definition.
-
----
-
-## Future Work
-
-* **Temporal Analysis:** Use the per-revision `P_AI` scores to run Interrupted Time-Series or mixed-effects models (R or Python).
-* **Fine-tuning thresholds:** Explore a small labeled set (if available) to calibrate rules or weights.
-* **Error Analysis:** Inspect false positives/negatives on a mid-sized random sample and refine feature rules.
-* **Related Physiology:** Incorporate editor metadata (new-user flags, bot-flag, total edits) if it proves useful.
-* **Open Source Release:** Package code into a CLI tool or Airflow DAG so others can replicate on their own strata.
 
 ---
 
