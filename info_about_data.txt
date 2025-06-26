@@ -1,0 +1,74 @@
+Now I have one dataframe --> Final DataFrame Schema (15832, 28):
+Unnamed: 0               int64
+snapshot_ts             object
+rev_id                   int64
+timestamp               object
+user                    object
+is_bot                    bool
+content                 object
+article_id               int64
+title                   object
+root                    object
+stratum                 object
+plain_text              object
+p_t                    float64
+lexical_spike_delta    float64
+perplexity             float64
+burstiness             float64
+upos_props              object
+mean_dep_depth         float64
+clause_ratio           float64
+voice_ratio            float64
+fre                    float64
+fog                    float64
+chars_per_sent         float64
+sents_per_para         float64
+nTTR                   float64
+word_density           float64
+avg_line_len           float64
+citation_delta         float64
+dtype: object
+
+Biology: 80 unique articles
+Chemistry: 80 unique articles
+Computing: 87 unique articles
+Elections: 92 unique articles
+Engineering: 89 unique articles
+Film: 105 unique articles
+History: 101 unique articles
+History by country: 75 unique articles
+Medicine: 98 unique articles
+Military history: 83 unique articles
+Music: 96 unique articles
+Physics: 88 unique articles
+Political history: 99 unique articles
+Political parties: 82 unique articles
+Politics: 114 unique articles
+Popular culture: 94 unique articles
+Science: 97 unique articles
+Technology: 96 unique articles
+Television: 108 unique articles
+Video games: 91 unique articles
+
+
+                  root  avg_revs_per_article
+0              Biology              7.600000
+1            Chemistry              4.312500
+2            Computing              6.689655
+3            Elections              7.434783
+4          Engineering              6.022472
+5                 Film             14.723810
+6              History             10.188119
+7   History by country             10.960000
+8             Medicine              7.010204
+9     Military history              6.566265
+10               Music              8.125000
+11             Physics              6.227273
+12   Political history             11.393939
+13   Political parties              6.707317
+14            Politics              9.254386
+15     Popular culture             11.595745
+16             Science              7.360825
+17          Technology              7.552083
+18          Television             10.101852
+19         Video games              8.428571

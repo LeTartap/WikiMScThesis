@@ -71,3 +71,8 @@ ALTER TABLE all_articles_by_category
 ADD CONSTRAINT fk_category_article
 FOREIGN KEY (article_id)
 REFERENCES articles(article_id);
+
+
+ALTER TABLE multiplecategories ADD COLUMN p_t REAL;
+ALTER TABLE multiplecategories ADD COLUMN lexical_spike_delta REAL;
+
