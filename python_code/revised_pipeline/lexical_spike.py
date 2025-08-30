@@ -25,6 +25,25 @@ def compute_pt(text: str, trigger_set: Set[str]) -> float:
     return hits / len(tokens)
 
 
+def compute_baseline_q_by_label(
+    df: pd.DataFrame,
+    trigger_set: Set[str],
+    text_col: str = "plain_text",
+    label_col: str = "generated",
+    label_value=0,
+) -> float:
+    """
+    Compute baseline q as the mean p_t over all rows where `label_col == label_value`.
+    For Kaggle essays, use text_col='text', label_col='generated', label_value=0.
+    """
+    mask = df[label_col] == label_value
+    if not mask.any():
+        # No rows match—return 0.0 to avoid NaN propagation
+        return 0.0
+    p_series = df.loc[mask, text_col].apply(lambda txt: compute_pt(txt, trigger_set))
+    return float(p_series.mean())
+
+
 def compute_baseline_q(
     df: pd.DataFrame,
     trigger_set: Set[str],
@@ -34,13 +53,25 @@ def compute_baseline_q(
 ) -> float:
     """
     Compute baseline q as the mean p_t over all rows whose timestamp is before cutoff_date.
+    Ensures both the timestamps and cutoff are timezone-aware (UTC) to avoid invalid comparisons.
     """
-    # ensure timestamps are datetime
-    ts = pd.to_datetime(df[timestamp_col])
-    mask = ts < pd.to_datetime(cutoff_date)
+    # Ensure timestamps are timezone-aware UTC and handle parse errors as NaT
+    ts = pd.to_datetime(df[timestamp_col], utc=True, errors="coerce")
+
+    # Normalize cutoff_date to a timezone-aware UTC Timestamp
+    if isinstance(cutoff_date, pd.Timestamp):
+        cutoff = cutoff_date if cutoff_date.tzinfo is not None else cutoff_date.tz_localize("UTC")
+    else:
+        cutoff = pd.to_datetime(cutoff_date, utc=True)
+
+    # Build mask; drop NaT values from consideration
+    mask = ts.notna() & (ts < cutoff)
+
+    if not mask.any():
+        return 0.0
 
     p_series = df.loc[mask, text_col].apply(lambda txt: compute_pt(txt, trigger_set))
-    return p_series.mean()
+    return float(p_series.mean())
 
 
 def add_lexical_spike_delta(

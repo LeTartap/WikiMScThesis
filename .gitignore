@@ -4,3 +4,4 @@
 /python_code/revised_pipeline/checkpoints
 /python_code/old_data
 *.pkl
+/python_code/.ipynb_checkpoints
