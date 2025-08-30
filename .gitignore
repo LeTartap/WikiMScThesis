@@ -5,3 +5,4 @@
 /python_code/old_data
 *.pkl
 /python_code/.ipynb_checkpoints
+/.idea
