@@ -6,3 +6,5 @@
 *.pkl
 /python_code/.ipynb_checkpoints
 /.idea
+*.csv
+/python_code/__pycache__
