@@ -8,3 +8,4 @@
 /.idea
 *.csv
 /python_code/__pycache__
+/python_code/revised_pipeline/__pycache__
