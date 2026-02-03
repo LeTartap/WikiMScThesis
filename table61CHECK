@@ -1,0 +1,143 @@
+
+
+
+INBETWEEN (Z_SCORE_THRESHOLD=2.5 MIN_VOTES=2)
+*** Running analysis for all features ***
+
+--- Running ITS for all features ---
+
+--- Summary of ITS Results for All Features ---
+                feature  beta1_pre_trend  beta2_level_change  beta3_trend_change  p_value_level_change  p_value_trend_change  durbin_watson
+0                   p_t         0.000087           -0.000039           -0.000067              0.938151              0.406157       1.680688
+1   lexical_spike_delta         0.000087           -0.000039           -0.000067              0.938151              0.406157       1.680688
+2            perplexity        -1.415893           -6.723842            2.091162              0.456208              0.146306       1.938288
+3            burstiness        -0.000377            0.017541            0.000452              0.055382              0.741752       2.555286
+4        mean_dep_depth         0.000138            0.004770            0.000469              0.803930              0.875893       1.289221
+5          clause_ratio         0.001052           -0.003769           -0.000055              0.807836              0.981831       2.670101
+6           voice_ratio         0.000013           -0.001311            0.000079              0.015703              0.320595       2.488703
+7                   fre         0.131026           -0.756990           -0.153747              0.277570              0.162765       1.485961
+8                   fog        -0.035833            0.142567            0.044371              0.351683              0.072057       1.466724
+9        chars_per_sent        -0.253048            0.822556            0.554161              0.728892              0.145415       1.204665
+10       sents_per_para         1.599544           -7.050634           -1.917589              0.129658              0.012237       2.248072
+11                 nTTR         0.010750           -0.081288           -0.008119              0.008952              0.080188       2.349648
+12         word_density        -0.030170            0.119630            0.039124              0.181429              0.008793       1.921026
+13         avg_line_len       288.216914         -792.028695         -338.533947              0.243091              0.003570       2.220751
+14       citation_delta         0.000075           -0.000369           -0.000051              0.185763              0.237663       2.084849
+15              ai_flag         0.000896            0.014002           -0.001158              0.064866              0.315041       1.853207
+
+
+
+HIGH RELIABILITY (Z_SCORE_THRESHOLD=2.5 MIN_VOTES=3)
+
+
+
+*** Running analysis for all features ***
+
+--- Running ITS for all features ---
+
+--- Summary of ITS Results for All Features ---
+                feature  beta1_pre_trend  beta2_level_change  beta3_trend_change  p_value_level_change  p_value_trend_change  durbin_watson
+0                   p_t         0.000087           -0.000039           -0.000067              0.938151              0.406157       1.680688
+1   lexical_spike_delta         0.000087           -0.000039           -0.000067              0.938151              0.406157       1.680688
+2            perplexity        -1.415893           -6.723842            2.091162              0.456208              0.146306       1.938288
+3            burstiness        -0.000377            0.017541            0.000452              0.055382              0.741752       2.555286
+4        mean_dep_depth         0.000138            0.004770            0.000469              0.803930              0.875893       1.289221
+5          clause_ratio         0.001052           -0.003769           -0.000055              0.807836              0.981831       2.670101
+6           voice_ratio         0.000013           -0.001311            0.000079              0.015703              0.320595       2.488703
+7                   fre         0.131026           -0.756990           -0.153747              0.277570              0.162765       1.485961
+8                   fog        -0.035833            0.142567            0.044371              0.351683              0.072057       1.466724
+9        chars_per_sent        -0.253048            0.822556            0.554161              0.728892              0.145415       1.204665
+10       sents_per_para         1.599544           -7.050634           -1.917589              0.129658              0.012237       2.248072
+11                 nTTR         0.010750           -0.081288           -0.008119              0.008952              0.080188       2.349648
+12         word_density        -0.030170            0.119630            0.039124              0.181429              0.008793       1.921026
+13         avg_line_len       288.216914         -792.028695         -338.533947              0.243091              0.003570       2.220751
+14       citation_delta         0.000075           -0.000369           -0.000051              0.185763              0.237663       2.084849
+15              ai_flag        -0.000454            0.006597            0.000444              0.342458              0.680676       1.949150
+
+
+
+HIGH-SENSITIVITY (Z_SCORE_THRESHOLD=2 MIN_VOTES=2)
+*** Running analysis for all features ***
+
+--- Running ITS for all features ---
+
+--- Summary of ITS Results for All Features ---
+                feature  beta1_pre_trend  beta2_level_change  beta3_trend_change  p_value_level_change  p_value_trend_change  durbin_watson
+0                   p_t         0.000087           -0.000039           -0.000067              0.938151              0.406157       1.680688
+1   lexical_spike_delta         0.000087           -0.000039           -0.000067              0.938151              0.406157       1.680688
+2            perplexity        -1.415893           -6.723842            2.091162              0.456208              0.146306       1.938288
+3            burstiness        -0.000377            0.017541            0.000452              0.055382              0.741752       2.555286
+4        mean_dep_depth         0.000138            0.004770            0.000469              0.803930              0.875893       1.289221
+5          clause_ratio         0.001052           -0.003769           -0.000055              0.807836              0.981831       2.670101
+6           voice_ratio         0.000013           -0.001311            0.000079              0.015703              0.320595       2.488703
+7                   fre         0.131026           -0.756990           -0.153747              0.277570              0.162765       1.485961
+8                   fog        -0.035833            0.142567            0.044371              0.351683              0.072057       1.466724
+9        chars_per_sent        -0.253048            0.822556            0.554161              0.728892              0.145415       1.204665
+10       sents_per_para         1.599544           -7.050634           -1.917589              0.129658              0.012237       2.248072
+11                 nTTR         0.010750           -0.081288           -0.008119              0.008952              0.080188       2.349648
+12         word_density        -0.030170            0.119630            0.039124              0.181429              0.008793       1.921026
+13         avg_line_len       288.216914         -792.028695         -338.533947              0.243091              0.003570       2.220751
+14       citation_delta         0.000075           -0.000369           -0.000051              0.185763              0.237663       2.084849
+15              ai_flag         0.000213            0.012451           -0.000137              0.088669              0.901569       1.553720
+
+
+
+
+
+
+
+
+
+old table:
+\begin{table}[ht]
+\centering
+\caption{Results of Interrupted Time Series (ITS) Analysis for Linguistic Features}
+\label{tab:its_results}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l S S S S S S}
+\toprule
+ & {\textbf{Pre-Trend}} & \multicolumn{2}{c}{\textbf{Immediate (Level) Change}} & \multicolumn{2}{c}{\textbf{Sustained (Trend) Change}} & {\textbf{Durbin-}} \\
+\cmidrule(lr){3-4} \cmidrule(lr){5-6}
+\textbf{Feature} & {($\beta_1$)} & {($\beta_2$)} & {\textbf{p-value}} & {($\beta_3$)} & {\textbf{p-value}} & {\textbf{Watson}} \\
+\midrule
+p\_t & 0.00009 & -0.00004 & 0.938 & -0.00007 & 0.406 & 1.681 \\
+lexical\_spike\_delta & 0.00009 & -0.00004 & 0.938 & -0.00007 & 0.406 & 1.681 \\
+perplexity & -1.416 & -6.724 & 0.456 & 2.091 & 0.146 & 1.938 \\
+burstiness & -0.0004 & 0.0175\sym{†} & 0.055 & 0.0005 & 0.742 & 2.555 \\
+mean\_dep\_depth & 0.0001 & 0.0048 & 0.804 & 0.0005 & 0.876 & 1.289 \\
+clause\_ratio & 0.0011 & -0.0038 & 0.808 & -0.0001 & 0.982 & 2.670 \\
+voice\_ratio & 0.0000 & -0.0013\sym{*} & 0.016 & 0.0001 & 0.321 & 2.489 \\
+fre & 0.131 & -0.757 & 0.278 & -0.1537 & 0.163 & 1.486 \\
+fog & -0.036 & 0.143 & 0.352 & 0.0444\sym{†} & 0.072 & 1.467 \\
+chars\_per\_sent & -0.253 & 0.823 & 0.729 & 0.5542 & 0.145 & 1.205 \\
+sents\_per\_para & 1.600 & -7.051 & 0.130 & -1.9176\sym{*} & 0.012 & 2.248 \\
+nTTR & 0.0107\sym{**} & -0.0813\sym{**} & 0.009 & -0.0081\sym{†} & 0.080 & 2.350 \\
+word\_density & -0.030 & 0.120 & 0.181 & 0.0391\sym{**} & 0.009 & 1.921 \\
+avg\_line\_len & 288.217 & -792.029 & 0.243 & -338.5339\sym{**} & 0.004 & 2.221 \\
+citation\_delta & 0.0001 & -0.0004 & 0.186 & -0.0001 & 0.238 & 2.085 \\
+ai\_flag & -0.0009 & 0.0028 & 0.589 & 0.0006 & 0.437 & 2.094 \\
+\bottomrule
+\multicolumn{7}{l}{\textsuperscript{**}\textit{p} < 0.01, \textsuperscript{*}\textit{p} < 0.05, \textsuperscript{†}\textit{p} < 0.1} \\
+\end{tabular}
+}
+\end{table}
+
+
+
+
+The rapid proliferation of Large Language Models (LLMs), such as ChatGPT, challenges the collaborative nature of Wikipedia by potentially introducing unverifiable or biased content. This thesis investigates the prevalence and linguistic footprint of AI-assisted writing on English Wikipedia revisions from 2020 to 2024, focusing on the impact of ChatGPT's public release in November 2022.
+
+This thesis investigates the prevalence and linguistic impact of AI-assisted writing on English Wikipedia following the public release of ChatGPT. Addressing the limitations of opaque commercial detectors, the study employs an unsupervised pipeline tracking 15 interpretable linguistic features, including lexical spikes and a novel "citation delta" metric. Using an Interrupted Time Series (ITS) analysis, the research identifies structural breaks in editing patterns between 2020 and 2024.
+Results reveal a statistically significant increase in AI-flagged revisions, rising from a baseline of 3.56% to 4.10% under high-reliability settings.
+
+Linguistically, the study identifies specific stylistic shifts attributed to LLM usage. The post-intervention period shows a significant immediate decrease in vocabulary diversity (normalized Type-Token Ratio) and a distinct shift toward the passive voice. Contrary to the hypothesis that AI generates more verbose text, the analysis detects a long-term trend toward shorter paragraphs and sentence lengths
+
+
+-----
+The rapid proliferation of Large Language Models (LLMs), such as ChatGPT, challenges the collaborative nature of Wikipedia by potentially introducing unverifiable or biased content. This thesis investigates the prevalence and linguistic footprint of AI-assisted writing on English Wikipedia revisions from 2020 to 2024, focusing on the impact of ChatGPT's public release in November 2022.
+    
+Unlike commercial "black-box" detectors, this study develops a transparent, unsupervised detection pipeline based on 15 interpretable linguistic features—including perplexity, lexical spikes, and citation behavior. The system uses a calibrated voting mechanism to flag anomalies without requiring expensive model fine-tuning.
+
+An Interrupted Time Series (ITS) analysis reveals that while the overall prevalence of AI-like content remains low, it has notably increased. Under a high-reliability configuration, the mean prevalence of flagged revisions rose from 3.56% to 4.10% post-intervention. Adoption is highly domain-specific: technical and structured categories such as Computing (7.06%) and Political History (6.73%) exhibit the highest rates of AI assistance, whereas high-stakes fields like Medicine remain largely unaffected.
+
+Linguistically, the impact of Generative AI is characterized by subtle stylistic shifts rather than overt content degradation. The analysis detected highly significant immediate drops in vocabulary diversity (nTTR, p=0.009) and active voice usage (p=0.016) following the intervention. While the strict "High-Reliability" detector did not find a statistically significant "shock" in aggregate flags (p=0.342), more sensitive configurations revealed a marginally significant spike (p=0.089), suggesting a rise in "borderline" edits that exhibit specific AI traits without triggering full detection thresholds. These findings indicate that LLMs are entering the Wikipedia ecosystem primarily as tools for stylistic and structural assistance in technical domains.

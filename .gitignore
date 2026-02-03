@@ -9,3 +9,6 @@
 *.csv
 /python_code/__pycache__
 /python_code/revised_pipeline/__pycache__
+.DS_Store
+newPlots/.DS_Store
+newPlots/ITSAnalysis/.DS_Store
